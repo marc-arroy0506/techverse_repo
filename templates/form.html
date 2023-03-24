@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sample Form</title>
+</head>
+<body>
+	<h2> Set bandwidth in kbps </h2>
+
+	 <form method="POST" action="{{ url_for('submit_form') }}">
+		<label for="download">Download Speed:</label><br>
+		<input type="number" id="download" name="download" required><br><br>
+
+
+		<label for="upload">Upload Speed:</label> <br>
+		<input type="number" id="upload" name="upload" required><br><br>
+
+		<input type="submit" value="Submit">
+	</form>
+
+
+</body>
+</html>

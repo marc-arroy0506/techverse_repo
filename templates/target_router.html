@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+	<h2> Enter Target Router Information </h2>
+
+	 <form method="POST" action="{{ url_for('submit_form') }}">
+		<label for="target_IP">Targe Router IP Address:</label><br>
+		<input type="name" id="target_IP"><br><br>
+
+
+		<label for="SSID">SSID:</label> <br>
+		<input type="name" id="SSID"><br><br>
+
+		<input type="submit" value="Submit">
+	</form>
+
+</body>
+</html>

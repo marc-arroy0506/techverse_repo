@@ -29,9 +29,14 @@ def date_range():
 def signal_strength():
     return render_template('signal_strength.html')
 
+@app.route('/targetRouter')
+def targetRouter():
+    return render_template('target_router.html')
+
 @app.route('/user_Account')
 def user_Account():
     return render_template('user_account.html')
+
 
 if __name__ == '__main__':
   app.run(debug=True)

@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-
+import configparser
 app = Flask(__name__)
 
 @app.route('/')
@@ -12,13 +12,19 @@ def button_pressed():
 
 @app.route('/submit_form', methods=['POST'])
 def submit_form():
+    config = configparser.ConfigParser()
     downspeed = request.form['download']
     upspeed = request.form['upload']
 
-
+    a = downspeed
+    b = upspeed
+    myOutput = open('config.ini', 'w')
+    myOutput.write("Configuration Download: " + str(a) + " Mbps" + '\n')
+    myOutput.write("Configuration Upload: " + str(b) + " Mbps" + '\n')
+    myOutput.close()
+    # Write the config object to a file
     # Do something with the form data
     # For example, send an email
-
     return 'Setting submitted successfully!'
 
 @app.route('/date_range')

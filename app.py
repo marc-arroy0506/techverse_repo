@@ -1,5 +1,11 @@
 from flask import Flask, render_template, request
 import configparser
+import os
+
+new_dir_path = 'C:\\Users\\mcarr\\Documents'
+
+os.chdir(new_dir_path)
+
 app = Flask(__name__)
 
 @app.route('/')
